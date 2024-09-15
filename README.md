@@ -62,7 +62,7 @@ https://www.jetbrains.com/idea/download/?section=windows
 Далее выполнение заданий будет проводится в вашей созданной branch
 
     
-### Далее лабораторные работы и задачи будут находится в директории [laboratory](laboratory.LABOR_1.md)             
+### Далее лабораторные работы и задачи будут находится в директории [laboratory](laboratory/LABOR_1.md)             
 
 
 
