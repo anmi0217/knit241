@@ -48,7 +48,8 @@ System.out.println(line);
 Пример оформления можно посмотреть здесь
 https://github.com/anmi0217/knit241_template/blob/master/src/main/java/org/knit/lab1/Task2.java
 
-Запушить изменения. Отправить ссылку на свой бранч.
+Запушить изменения. Отправить ссылку используя google form
+https://forms.gle/LudRvtVqjYpSM1ZL7
 
 
 
