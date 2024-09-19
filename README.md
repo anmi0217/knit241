@@ -21,7 +21,7 @@
 Перейдите по ссылке https://github.com/anmi0217/knit241_template/ и скачайте шаблон в
 свою директорию и распакуйте.
 
-![download_git.jpg](common%2Fdownload_git.jpg)
+![download_git.jpg](/common/download_git.jpg)
 
 #### Шаг 4
 Установите IntelliJ IDEA Community Edition
@@ -30,7 +30,7 @@ https://www.jetbrains.com/idea/download/?section=windows
 ####  Шаг 5
 Откройте скачанный проект
 
-![open_downloaded.jpg](common%2Fopen_downloaded.jpg)
+![open_downloaded.jpg](/common/open_downloaded.jpg)
     
 ### Далее лабораторные работы и задачи будут находиться в директории [laboratory](laboratory/LABOR_1.md)             
 
