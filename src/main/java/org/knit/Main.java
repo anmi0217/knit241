@@ -1,15 +1,18 @@
 package org.knit;
 
-import java.util.StringJoiner;
-
 public class Main {
     public static void main(String[] args) {
+        StringBuilder result = new StringBuilder();
         for (int i = 1; i < 100; i += 10) {
-            StringJoiner joiner = new StringJoiner(",");
             for (int j = i; j < i + 10; j++) {
-                joiner.add(Integer.toString(j));
+                result.append(j);
+                if (j < i + 9) {
+                    result.append(",");
+                } else {
+                    result.append("\n");
+                }
             }
-            System.out.println(joiner);
         }
+        System.out.println(result);
     }
 }
