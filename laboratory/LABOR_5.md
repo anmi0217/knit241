@@ -23,6 +23,7 @@ import java.util.Random;
 String[] names = {"книга", "ручка", "линейка", "пинал"};
 Random random = new Random();
 int index = random.nextInt(4);
+ShopItem item = new ShopItem(names[index]);
 ```
 
 Сгенерируйте 100 объектов (TestData) ShopItem таким образом, чтобы некоторые поля были случайными, но и некоторые поля были бы одинаковыми и положите их в массив.
