@@ -6,16 +6,15 @@ public class Task9 {
     public static final long TIMEOUT = 60000;
 
     public static void main(String[] args) {
-        DictionaryStatistics dictionaryStatistics =
-                DictionaryFactory.createDictionaryStatistics("misc/dictionary.txt");
-        if (dictionaryStatistics != null) {
+        Dictionary dictionary = DictionaryFactory.createDictionary("misc/dictionary.txt");
+        if (dictionary != null) {
             Scanner scanner = new Scanner(System.in);
             int enteredWordsCount = 0;
             int enteredSymbolsCount = 0;
             int correctlyEnteredWordsCount = 0;
             long startTimeMillis = System.currentTimeMillis();
             while (System.currentTimeMillis() - startTimeMillis < TIMEOUT) {
-                String randomWord = dictionaryStatistics.getRandomWord();
+                String randomWord = dictionary.getRandomWord();
                 System.out.printf("\nВведите слово: %s\n", randomWord);
                 String enteredWord = scanner.nextLine();
                 if (System.currentTimeMillis() - startTimeMillis < TIMEOUT) {
