@@ -1,5 +1,7 @@
 package org.knit.tasks.task8;
 
+import java.util.Objects;
+
 public class Product {
     private final String name;
     private final int price;
@@ -25,7 +27,7 @@ public class Product {
 
     @Override
     public int hashCode() {
-        return name.hashCode() * price * mass;
+        return Objects.hash(name, price, mass);
     }
 
     @Override

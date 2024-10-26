@@ -16,9 +16,9 @@ public class Task8 {
                     masses[random.nextInt(masses.length)]
             ));
         }
-        products.sort(new ProductNameComparator()
-                .thenComparing(new ProductPriceComparator())
-                .thenComparing(new ProductMassComparator()));
+        products.sort(Comparator.comparing(Product::getName)
+                .thenComparing(Product::getPrice)
+                .thenComparing(Product::getMass));
         Map<Product, Integer> productFrequency = new HashMap<>();
         for (Product product : products) {
             if (productFrequency.containsKey(product)) {
