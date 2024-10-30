@@ -1,4 +1,4 @@
-package org.knit.tasks.task7;
+package org.knit.tasks.task07;
 
 import java.util.HashMap;
 import java.util.Map;
