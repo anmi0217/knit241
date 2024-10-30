@@ -1,4 +1,4 @@
-package org.knit.tasks.task8;
+package org.knit.tasks.task08;
 
 import java.util.*;
 
