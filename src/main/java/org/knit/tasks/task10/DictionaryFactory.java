@@ -12,10 +12,7 @@ public class DictionaryFactory {
             Scanner scanner = new Scanner(new File(path));
             List<String> dictionary = new ArrayList<>();
             while (scanner.hasNext()) {
-                String word = scanner.nextLine();
-                if (word.length() >= 4 && word.length() <= 12) {
-                    dictionary.add(word);
-                }
+                dictionary.add(scanner.nextLine());
             }
             scanner.close();
             return new Dictionary(dictionary.toArray(new String[0]));
