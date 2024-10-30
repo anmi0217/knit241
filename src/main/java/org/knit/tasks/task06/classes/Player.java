@@ -1,4 +1,4 @@
-package org.knit.tasks.task6.classes;
+package org.knit.tasks.task06.classes;
 
 public abstract class Player {
     protected final String name;

@@ -1,4 +1,4 @@
-package org.knit.tasks.task6.abilities;
+package org.knit.tasks.task06.abilities;
 
 public interface Teleport {
     void teleportDown();
