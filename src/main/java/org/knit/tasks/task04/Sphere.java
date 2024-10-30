@@ -1,4 +1,4 @@
-package org.knit.tasks.task4;
+package org.knit.tasks.task04;
 
 public class Sphere extends Shape {
     private final double radius;
