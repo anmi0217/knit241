@@ -1,4 +1,4 @@
-package org.knit.tasks.task4;
+package org.knit.tasks.task04;
 
 public abstract class Shape {
     public abstract double getVolume();

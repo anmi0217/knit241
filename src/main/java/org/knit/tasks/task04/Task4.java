@@ -1,4 +1,4 @@
-package org.knit.tasks.task4;
+package org.knit.tasks.task04;
 
 public class Task4 {
     public static void main(String[] args) {
