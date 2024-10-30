@@ -1,4 +1,4 @@
-package org.knit.tasks.task9;
+package org.knit.tasks.task09;
 
 import java.util.Scanner;
 
