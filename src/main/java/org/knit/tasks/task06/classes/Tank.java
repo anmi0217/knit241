@@ -1,6 +1,6 @@
-package org.knit.tasks.task6.classes;
+package org.knit.tasks.task06.classes;
 
-import org.knit.tasks.task6.abilities.Melee;
+import org.knit.tasks.task06.abilities.Melee;
 
 public class Tank extends Player implements Melee {
     public Tank(String name, int posX, int posY) {

@@ -1,9 +1,9 @@
-package org.knit.tasks.task6;
+package org.knit.tasks.task06;
 
-import org.knit.tasks.task6.classes.Archer;
-import org.knit.tasks.task6.classes.Mage;
-import org.knit.tasks.task6.classes.Priest;
-import org.knit.tasks.task6.classes.Tank;
+import org.knit.tasks.task06.classes.Archer;
+import org.knit.tasks.task06.classes.Mage;
+import org.knit.tasks.task06.classes.Priest;
+import org.knit.tasks.task06.classes.Tank;
 
 public class Task6 {
     public static void main(String[] args) {

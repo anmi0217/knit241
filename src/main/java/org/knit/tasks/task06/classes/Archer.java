@@ -1,7 +1,7 @@
-package org.knit.tasks.task6.classes;
+package org.knit.tasks.task06.classes;
 
-import org.knit.tasks.task6.abilities.Melee;
-import org.knit.tasks.task6.abilities.Range;
+import org.knit.tasks.task06.abilities.Melee;
+import org.knit.tasks.task06.abilities.Range;
 
 public class Archer extends Player implements Melee, Range {
     public Archer(String name, int posX, int posY) {
