@@ -14,6 +14,7 @@ public class Task10 {
             String riddleWord = dictionary.getRandomWord();
             System.out.printf("Отгадайте слово из %d букв.\n", riddleWord.length());
             System.out.println("Вы можете не отгадать букву не более 6 раз.");
+
             Set<Character> riddleLetters = new HashSet<>();
             for (int i = 0; i < riddleWord.length(); i++) {
                 riddleLetters.add(riddleWord.charAt(i));
@@ -21,9 +22,9 @@ public class Task10 {
             Set<Character> guessedLetters = new HashSet<>();
             StringBuilder printWord = new StringBuilder();
 
-            Set<String> alphabet = new HashSet<>();
-            for (int i = 0, letter = 'а'; letter <= 'я'; i++, letter++) {
-                alphabet.add(String.valueOf((char) letter));
+            Set<Character> alphabet = new HashSet<>();
+            for (int letter = 'а'; letter <= 'я'; letter++) {
+                alphabet.add((char) letter);
             }
 
             while (mistakes <= 6 && !guessedLetters.containsAll(riddleLetters)) {
@@ -39,7 +40,7 @@ public class Task10 {
                 printWord.setLength(0);
 
                 String line = scanner.nextLine();
-                if (!alphabet.contains(line)) {
+                if (line.length() > 1 || !alphabet.contains(line.charAt(0))) {
                     System.out.println("Ошибка: введена не буква");
                 } else {
                     char letter = line.charAt(0);
