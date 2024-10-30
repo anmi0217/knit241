@@ -1,4 +1,4 @@
-package org.knit.tasks.task3;
+package org.knit.tasks.task03;
 
 import java.util.HashSet;
 import java.util.Scanner;
