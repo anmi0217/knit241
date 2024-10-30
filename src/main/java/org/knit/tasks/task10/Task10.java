@@ -20,6 +20,9 @@ public class Task10 {
                 riddleLetters.add(riddleWord.charAt(i));
             }
             Set<Character> guessedLetters = new HashSet<>();
+            if (riddleLetters.contains('-')) {
+                guessedLetters.add('-');
+            }
             StringBuilder printWord = new StringBuilder();
 
             Set<Character> alphabet = new HashSet<>();

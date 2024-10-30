@@ -12,6 +12,7 @@ public class DictionaryFactory {
             for (int letter = 'а'; letter <= 'я'; letter++) {
                 alphabet.add((char) letter);
             }
+            alphabet.add('-');
             List<String> dictionary = new ArrayList<>();
             while (scanner.hasNext()) {
                 String word = scanner.nextLine();
