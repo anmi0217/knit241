@@ -12,7 +12,13 @@ public class Task10 {
 
             int mistakes = 0, attempts = 0;
             String riddleWord = dictionary.getRandomWord();
-            System.out.printf("Отгадайте слово из %d букв.\n", riddleWord.length());
+            int riddleWordLength = 0;
+            for (int i = 0; i < riddleWord.length(); i++) {
+                if (riddleWord.charAt(i) != '-') {
+                    riddleWordLength++;
+                }
+            }
+            System.out.printf("Отгадайте слово из %d букв.\n", riddleWordLength);
             System.out.println("Вы можете не отгадать букву не более 6 раз.");
 
             Set<Character> riddleLetters = new HashSet<>();
@@ -43,7 +49,7 @@ public class Task10 {
                 printWord.setLength(0);
 
                 String line = scanner.nextLine();
-                if (line.length() > 1 || !alphabet.contains(line.charAt(0))) {
+                if (line.length() != 1 || !alphabet.contains(line.charAt(0))) {
                     System.out.println("Ошибка: введена не буква");
                 } else {
                     char letter = line.charAt(0);
