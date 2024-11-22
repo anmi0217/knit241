@@ -132,6 +132,8 @@ public class Validator {
             }
 
             // Проверка @MaxLength
+            // пример получения значения value из Аннотации
+            // int maxLength = field.getAnnotation(MaxLength.class).value();
             /* напишите свою проверку 
                 ...
             */
