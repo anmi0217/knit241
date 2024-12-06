@@ -17,7 +17,7 @@ public static <T extends Comparable<T>> List<T> sortList(List<T> list);
 
 ---
 
-#### **19. Фильтрация уникальных объектов по полю**
+#### **19. Фильтрация уникальных объектов по полю** *
 
 - Дан список объектов `Employee`:
 ```java
