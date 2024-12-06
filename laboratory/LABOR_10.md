@@ -1,157 +1,92 @@
----
-
-### Задачи на тему **Generics** и **Stream API**
+Вот обновленный список задач на тему Generics в Java без задач 4, 5 и 9:
 
 ---
 
-#### **18. Сортировка списка с использованием Generics**
+### **18. Создание универсального класса**
+**Задача:**  
+Создайте универсальный класс `Pair`, который будет хранить две связанные сущности. Напишите методы для получения и изменения значений.
 
-Напишите обобщенный метод для сортировки списка объектов:
+**Пример:**
 ```java
-public static <T extends Comparable<T>> List<T> sortList(List<T> list);
-```
-- Метод должен возвращать новый отсортированный список.
-- Протестируйте его с разными типами, такими как `Integer`, `String`, и пользовательский класс `Product`, содержащий поля `name` и `price`.
-
----
-
-#### **19. Фильтрация уникальных объектов по полю** *
-
-- Дан список объектов `Employee`:
-```java
-class Employee {
-    int id;
-    String name;
-    String department;
-}
-```
-Задача:
-1. С помощью Stream API и `Collectors.toMap` оставить только уникальных сотрудников по полю `id`.
-2. Напишите обобщенный метод:
-   ```java
-   public static <T, K> List<T> filterUniqueByField(List<T> list, Function<T, K> keyExtractor);
-   ```
-    - `keyExtractor` используется для извлечения уникального ключа (например, `id`).
-    - Протестируйте метод с `List<Employee>`.
-
----
-
-#### **21. Группировка данных и подсчет**
-
-Дан список продуктов:
-```java
-class Product {
-    String category;
-    String name;
-    double price;
-}
-```
-Задача:
-1. Сгруппируйте продукты по категориям и посчитайте количество товаров в каждой категории.
-2. Реализуйте метод:
-   ```java
-   public static <T, K> Map<K, Long> groupAndCount(List<T> list, Function<T, K> classifier);
-   ```
-    - Пример: для списка продуктов `groupAndCount` возвращает карту с категориями и количеством товаров в каждой.
-
----
-
-#### **22. Генерация тестовых данных**
-
-Напишите обобщенный метод для генерации списка тестовых данных:
-```java
-public static <T> List<T> generateList(Supplier<T> supplier, int count);
-```
-- `supplier` создает объекты, `count` указывает количество объектов.
-- Используйте этот метод для создания 10 объектов `Employee` с рандомными значениями.
-
----
-
-#### **23. Пересечение и объединение списков** **
-
-Создайте обобщенный метод для нахождения пересечения и объединения двух списков:
-```java
-public static <T> List<T> intersect(List<T> list1, List<T> list2);
-public static <T> List<T> union(List<T> list1, List<T> list2);
-```
-- Метод `intersect` возвращает только элементы, присутствующие в обоих списках.
-- Метод `union` возвращает объединение всех элементов, исключая дубликаты.
-- Протестируйте методы с типами `Integer` и `String`.
-
----
-
-#### **24. Частотный анализ с использованием Generics**
-
-- Дана коллекция:
-```java
-List<String> words = Arrays.asList("apple", "banana", "apple", "orange", "banana", "apple");
-```
-Задача:
-1. Реализуйте обобщенный метод:
-   ```java
-   public static <T> Map<T, Long> countOccurrences(List<T> list);
-   ```
-2. Используйте его для подсчета слов в списке.
-
----
-
-#### **25. Сравнение двух списков**
-
-Создайте обобщенный метод для сравнения двух списков и нахождения:
-1. Элементов, присутствующих только в первом списке.
-2. Элементов, присутствующих только во втором списке.
-3. Общих элементов.
-
-```java
-public static <T> Map<String, List<T>> compareLists(List<T> list1, List<T> list2);
+Pair<String, Integer> pair = new Pair<>("Age", 30);
+System.out.println(pair.getFirst()); // Age
+System.out.println(pair.getSecond()); // 30
+pair.setSecond(35);
+System.out.println(pair.getSecond()); // 35
 ```
 
 ---
 
-#### **26. Пользовательский `c`** *
+### **19. Универсальный метод поиска максимального элемента**
+**Задача:**  
+Напишите универсальный метод `findMax`, который принимает массив элементов любого типа, реализующего интерфейс `Comparable`, и возвращает максимальный элемент.
 
-- Создайте метод:
-   ```java
-   public static <T, R> List<R> customFlatMap(List<T> list, Function<T, List<R>> mapper);
-   ```
-  Этот метод должен быть аналогом Stream API `flatMap`. Пример использования:
-    - Для списка строк `["a,b", "c,d"]` метод должен вернуть `["a", "b", "c", "d"]`.
+**Пример:**
+```java
+Integer[] numbers = {1, 2, 3, 4, 5};
+System.out.println(findMax(numbers)); // 5
 
----
-
-#### **27. Комбинирование данных из нескольких источников**
-
-Даны два списка:
-1. `List<Integer> ids` — список идентификаторов.
-2. `List<Employee> employees` — список сотрудников.
-
-Задача:
-1. С помощью Stream API найти сотрудников, чьи идентификаторы присутствуют в списке `ids`.
-2. Реализовать обобщенный метод:
-   ```java
-   public static <T, K> List<T> filterByIds(List<T> items, List<K> ids, Function<T, K> idExtractor);
-   ```
-    - `idExtractor` извлекает идентификатор объекта.
+String[] words = {"apple", "banana", "cherry"};
+System.out.println(findMax(words)); // cherry
+```
 
 ---
 
-#### **28. Создание цепочки обработки данных** *
+### **20. Универсальный контейнер с ограничениями**
+**Задача:**  
+Создайте класс `Box` с ограничением типа `T extends Number`. Реализуйте метод для вычисления суммы всех чисел, хранящихся в контейнере.
 
-- Создайте метод:
-   ```java
-   public static <T> List<T> processPipeline(List<T> list, List<Function<List<T>, List<T>>> operations);
-   ```
-  Этот метод должен принимать список операций и последовательно применять их к данным.
+**Пример:**
+```java
+Box<Integer> integerBox = new Box<>();
+integerBox.add(10);
+integerBox.add(20);
+System.out.println(integerBox.sum()); // 30
 
-Пример:
-- Входные данные: список чисел `[1, 2, 3, 4]`.
-- Операции:
-    1. Удалить все четные числа.
-    2. Умножить все числа на 2.
-- Результат: `[2, 6]`.
+Box<Double> doubleBox = new Box<>();
+doubleBox.add(1.5);
+doubleBox.add(2.5);
+System.out.println(doubleBox.sum()); // 4.0
+```
 
 ---
 
-### Дополнительно
-- Задачи ориентированы на практическое применение Generics и Stream API.
-- Каждую задачу можно сделать сложнее, добавив обработку ошибок или кастомизацию.
+### **21. Фильтрация элементов** *
+**Задача:**  
+Напишите универсальный метод `filter`, который принимает список элементов и предикат (интерфейс `Predicate<T>`). Метод должен возвращать новый список, содержащий только те элементы, которые удовлетворяют предикату.
+
+**Пример:**
+```java
+List<String> words = Arrays.asList("apple", "banana", "cherry");
+List<String> filtered = filter(words, s -> s.startsWith("b"));
+System.out.println(filtered); // [banana]
+```
+
+---
+
+### **5. Универсальный словарь** *
+**Задача:**  
+Создайте класс `Dictionary<K, V>`, который будет работать как словарь (ключ-значение). Реализуйте методы для добавления, удаления и получения элементов.
+
+**Пример:**
+```java
+Dictionary<String, Integer> dictionary = new Dictionary<>();
+dictionary.put("Alice", 25);
+dictionary.put("Bob", 30);
+System.out.println(dictionary.get("Alice")); // 25
+```
+
+---
+
+### **6. Печать типа объекта**
+**Задача:**  
+Напишите универсальный метод `printType`, который принимает объект любого типа и выводит на экран имя его класса.
+
+**Пример:**
+```java
+printType(123); // java.lang.Integer
+printType("Hello"); // java.lang.String
+```
+
+---
+
