@@ -110,7 +110,7 @@ public static <T> Map<String, List<T>> compareLists(List<T> list1, List<T> list2
 
 ---
 
-#### **26. Пользовательский `flatMap`** *
+#### **26. Пользовательский `c`** *
 
 - Создайте метод:
    ```java
