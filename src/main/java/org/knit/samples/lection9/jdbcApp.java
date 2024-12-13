@@ -1,4 +1,4 @@
-package org.knit.samples.lection10;
+package org.knit.samples.lection9;
 
 import java.sql.*;
 
