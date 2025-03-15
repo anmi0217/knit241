@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.Scanner;
 import java.util.TreeMap;
-import java.util.TreeSet;
 
 public class Main {
     public static final String PACKAGE = "org.knit.solutions";

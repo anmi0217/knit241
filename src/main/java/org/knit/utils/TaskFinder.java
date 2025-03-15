@@ -13,6 +13,7 @@ import java.util.TreeMap;
 import static java.lang.Class.forName;
 
 public class TaskFinder {
+    @SuppressWarnings("unchecked")
     public static TreeMap<Integer, TaskHolder> findTasks(String path) throws IOException, URISyntaxException {
         String nPath = path.replace(".", "/");
         TreeMap<Integer, TaskHolder> classes = new TreeMap<>();
