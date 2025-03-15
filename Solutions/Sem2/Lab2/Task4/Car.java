@@ -1,8 +1,8 @@
 package org2.lab4;
 
-class Car implements Runnable {
-    private GasStation gasStation;
-    private String name;
+class Car extends Thread {
+    private final GasStation gasStation;
+    private final String name;
 
     public Car(GasStation gasStation, String name) {
         this.gasStation = gasStation;
@@ -11,6 +11,10 @@ class Car implements Runnable {
 
     @Override
     public void run() {
-        gasStation.refuel(name); // Машина начинает заправку
+        try {
+            gasStation.refuel(name);
+        } catch (InterruptedException e) {
+            System.out.println(name + " прервана во время ожидания.");
+        }
     }
 }
