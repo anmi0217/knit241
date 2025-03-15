@@ -10,7 +10,12 @@ public class Caretaker {
     }
 
     public String popLastState() {
-        return historyStack.pop().getText();
+        if (historyStack.size() < 2) {
+            return "";
+        }
+        int index = historyStack.size() - 2; // Индекс предпоследнего элемента
+        Memento popped = historyStack.remove(index);
+        return popped.getText();
     }
 
     public void saveState(String text) {
