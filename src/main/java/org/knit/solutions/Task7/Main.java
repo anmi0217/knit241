@@ -1,6 +1,6 @@
 package org.knit.solutions.Task7;
 
-import org.knit.solutions.TasksDescripton;
+import org.knit.solutions.TasksDescription;
 
 /*
 📌 Описание:
@@ -14,7 +14,7 @@ import org.knit.solutions.TasksDescripton;
 ✔ notify() – пробуждение потока, когда изменяется состояние склада.
  */
 
-@TasksDescripton(number = 7, name = "Производитель-Потребитель с ограничением")
+@TasksDescription(number = 7, name = "Производитель-Потребитель с ограничением")
 public class Main {
     public static void main(String[] args) {
         Warehouse warehouse = new Warehouse();

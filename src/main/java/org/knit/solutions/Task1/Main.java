@@ -1,6 +1,6 @@
 package org.knit.solutions.Task1;
 
-import org.knit.solutions.TasksDescripton;
+import org.knit.solutions.TasksDescription;
 
 /*
 Задача 2.1 Chain of Responsibility (Цепочка обязанностей)
@@ -20,7 +20,7 @@ import org.knit.solutions.TasksDescripton;
 Представить проблему в виде объекта, с описанием, уровнем сложности.
  */
 
-@TasksDescripton(number = 1, name = "Chain of Responsibility (Цепочка обязанностей)")
+@TasksDescription(number = 1, name = "Chain of Responsibility (Цепочка обязанностей)")
 public class Main {
     public static void main(String[] args) {
         ComplaintHandler chain = new CallCenterHandler();

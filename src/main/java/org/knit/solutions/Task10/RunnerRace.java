@@ -3,7 +3,7 @@ package org.knit.solutions.Task10;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import org.knit.solutions.TasksDescripton;
+import org.knit.solutions.TasksDescription;
 
 /*
 📌 Описание
@@ -28,7 +28,7 @@ import org.knit.solutions.TasksDescripton;
 Добавить возможность прерывания гонки (например, если один из бегунов "травмируется" и не может продолжить).
  */
 
-@TasksDescripton(number = 10, name = "Гонка бегунов с использованием CyclicBarrier")
+@TasksDescription(number = 10, name = "Гонка бегунов с использованием CyclicBarrier")
 public class RunnerRace {
 
     public static final int DEFAULT_NUM_RUNNERS = 5;

@@ -1,6 +1,6 @@
 package org.knit.solutions.Task2;
 
-import org.knit.solutions.TasksDescripton;
+import org.knit.solutions.TasksDescription;
 
 /*
 Задача 2.2 Decorator (Декоратор)
@@ -21,7 +21,7 @@ import org.knit.solutions.TasksDescripton;
 Расширьте решение, добавив калорийность и разные виды напитков
  */
 
-@TasksDescripton(number = 2, name = "Decorator (Декоратор)")
+@TasksDescription(number = 2, name = "Decorator (Декоратор)")
 public class Main {
     public static void main(String[] args) {
         Coffee coffee = new Espresso();

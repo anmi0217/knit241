@@ -1,6 +1,6 @@
 package org.knit.solutions.Task6;
 
-import org.knit.solutions.TasksDescripton;
+import org.knit.solutions.TasksDescription;
 
 /*
 📌 Описание:
@@ -14,7 +14,7 @@ import org.knit.solutions.TasksDescripton;
 ✔ Машины ждут, если поезд едет, и продолжают движение после notifyAll().
  */
 
-@TasksDescripton(number = 6, name = "Железнодорожный переезд")
+@TasksDescription(number = 6, name = "Железнодорожный переезд")
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         RailwayCrossing crossing = new RailwayCrossing();

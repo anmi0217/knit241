@@ -1,6 +1,6 @@
 package org.knit.solutions.Task5;
 
-import org.knit.solutions.TasksDescripton;
+import org.knit.solutions.TasksDescription;
 
 /*
 📌 Описание:
@@ -14,7 +14,7 @@ import org.knit.solutions.TasksDescripton;
 ✔ При каждой передаче блюда используется notify().
  */
 
-@TasksDescripton(number = 5, name = "Ресторан: Повар и Официант")
+@TasksDescription(number = 5, name = "Ресторан: Повар и Официант")
 public class Main {
     public static void main(String[] args) {
         Restaurant restaurant = new Restaurant();

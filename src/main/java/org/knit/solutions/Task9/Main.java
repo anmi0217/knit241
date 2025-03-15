@@ -3,7 +3,7 @@ package org.knit.solutions.Task9;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
-import org.knit.solutions.TasksDescripton;
+import org.knit.solutions.TasksDescription;
 
 /*
 Описание задачи
@@ -30,7 +30,7 @@ import org.knit.solutions.TasksDescripton;
 Реализовать обработку брака – если деталь не соответствует стандарту, она отправляется на доработку.
  */
 
-@TasksDescripton(number = 9, name = "Конвейер сборки деталей")
+@TasksDescription(number = 9, name = "Конвейер сборки деталей")
 public class Main {
     public static final String POISON_PILL = "POISON_PILL";
 

@@ -1,6 +1,6 @@
 package org.knit.solutions.Task4;
 
-import org.knit.solutions.TasksDescripton;
+import org.knit.solutions.TasksDescription;
 
 
 /*
@@ -14,7 +14,7 @@ import org.knit.solutions.TasksDescripton;
 ✔ Поток "Машина" заправляется, затем освобождает колонку.
  */
 
-@TasksDescripton(number = 4, name = "Автозаправочная станция")
+@TasksDescription(number = 4, name = "Автозаправочная станция")
 public class Main {
     public static void main(String[] args) {
         int totalCars = 10;

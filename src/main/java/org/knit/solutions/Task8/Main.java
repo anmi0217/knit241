@@ -1,6 +1,6 @@
 package org.knit.solutions.Task8;
 
-import org.knit.solutions.TasksDescripton;
+import org.knit.solutions.TasksDescription;
 
 
 /*
@@ -15,7 +15,7 @@ import org.knit.solutions.TasksDescripton;
 ✔ Потоки "Машина" ждут wait(), если красный свет.
  */
 
-@TasksDescripton(number = 8, name = "Перекресток: светофор и машины")
+@TasksDescription(number = 8, name = "Перекресток: светофор и машины")
 public class Main {
     public static void main(String[] args) {
         Object lock = new Object();

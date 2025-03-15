@@ -1,6 +1,6 @@
 package org.knit.solutions.Task3;
 
-import org.knit.solutions.TasksDescripton;
+import org.knit.solutions.TasksDescription;
 
 
 /*
@@ -24,8 +24,7 @@ Motorbike предназначен для быстрой доставки.
 Вызов TransportFactory.createTransport("business") должен возвращать объект BusinessCar.
  */
 
-@TasksDescripton(number = 3, name = "Factory (Фабрика)")
-
+@TasksDescription(number = 3, name = "Factory (Фабрика)")
 public class Main {
     public static void main(String[] args) {
         try {
