@@ -1,6 +1,6 @@
-package org.labs.Tasks2.Task1;
+package org.knit.solutions.Task1;
 
-import org.labs.TasksDescripton;
+import org.knit.solutions.TasksDescripton;
 
 /*
 Задача 2.1 Chain of Responsibility (Цепочка обязанностей)

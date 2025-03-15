@@ -1,4 +1,4 @@
-package org.labs.Tasks2.Task10;
+package org.knit.solutions.Task10;
 
 import java.util.concurrent.*;
 

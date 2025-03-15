@@ -1,7 +1,7 @@
-package org.labs.Tasks2.Task3;
+package org.knit.solutions.Task3;
 
+import org.knit.solutions.TasksDescripton;
 
-import org.labs.TasksDescripton;
 
 /*
 Паттерн Factory используется для создания объектов без указания конкретного класса. Это полезно, когда необходимо создавать объекты на основе входных параметров и логики выбора.

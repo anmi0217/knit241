@@ -1,9 +1,9 @@
-package org.labs.Tasks2.Task10;
+package org.knit.solutions.Task10;
 
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-import org.labs.TasksDescripton;
+import org.knit.solutions.TasksDescripton;
 
 /*
 📌 Описание
@@ -29,7 +29,6 @@ import org.labs.TasksDescripton;
  */
 
 @TasksDescripton(number = 10, name = "Гонка бегунов с использованием CyclicBarrier")
-
 public class RunnerRace {
 
     public static final int DEFAULT_NUM_RUNNERS = 5;

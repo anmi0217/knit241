@@ -1,4 +1,4 @@
-package org.labs.Tasks2.Task1;
+package org.knit.solutions.Task1;
 
 class LegalDepartmentHandler extends ComplaintHandler {
 

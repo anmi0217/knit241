@@ -1,6 +1,6 @@
-package org.labs.Tasks2.Task2;
+package org.knit.solutions.Task2;
 
-import org.labs.TasksDescripton;
+import org.knit.solutions.TasksDescripton;
 
 /*
 Задача 2.2 Decorator (Декоратор)
