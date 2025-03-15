@@ -1,6 +1,6 @@
 package org.knit.solutions.Task12;
 
-class TextEditor {
+public class TextEditor {
     private String text;
 
     public TextEditor() {

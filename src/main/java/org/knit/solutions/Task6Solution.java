@@ -1,6 +1,9 @@
-package org.knit.solutions.Task6;
+package org.knit.solutions;
 
-import org.knit.solutions.TasksDescription;
+import org.knit.TaskDescription;
+import org.knit.solutions.Task6.RailwayCrossing;
+import org.knit.solutions.Task6.Car;
+import org.knit.solutions.Task6.Train;
 
 /*
 📌 Описание:
@@ -14,9 +17,12 @@ import org.knit.solutions.TasksDescription;
 ✔ Машины ждут, если поезд едет, и продолжают движение после notifyAll().
  */
 
-@TasksDescription(number = 6, name = "Железнодорожный переезд")
-public class Main {
-    public static void main(String[] args) throws InterruptedException {
+@TaskDescription(taskNumber = 6, taskDescription = "Железнодорожный переезд")
+public class Task6Solution implements Solution {
+    @Override
+    public void execute() {
+        System.out.println("Задача 6 запущена");
+
         RailwayCrossing crossing = new RailwayCrossing();
 
         Car car1 = new Car("Car-1", crossing);
@@ -28,12 +34,21 @@ public class Main {
         car1.start();
         car2.start();
 
-        Thread.sleep(1000);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
         train.start();
 
-        Thread.sleep(500);
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         car3.start();
+
     }
 }
 

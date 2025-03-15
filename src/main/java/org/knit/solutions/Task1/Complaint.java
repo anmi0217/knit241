@@ -1,8 +1,8 @@
 package org.knit.solutions.Task1;
 
-class Complaint {
-    private String description;
-    private int difficulty;
+public class Complaint {
+    private final String description;
+    private final int difficulty;
 
     public Complaint(String description, int difficulty) {
         this.description = description;

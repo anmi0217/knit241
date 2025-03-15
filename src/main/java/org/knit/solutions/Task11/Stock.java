@@ -3,7 +3,7 @@ package org.knit.solutions.Task11;
 import java.util.List;
 import java.util.ArrayList;
 
-class Stock {
+public class Stock {
     private final String companyName;
     private double price;
     private final List<StockObserver> observers = new ArrayList<>();

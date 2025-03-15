@@ -1,9 +1,13 @@
-package org.knit.solutions.Task9;
+package org.knit.solutions;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
-import org.knit.solutions.TasksDescription;
+import org.knit.TaskDescription;
+import org.knit.solutions.Task9.StampingWorker;
+import org.knit.solutions.Task9.AssemblingWorker;
+import org.knit.solutions.Task9.QualityWorker;
+import org.knit.solutions.Task9.ShipmentWorker;
 
 /*
 Описание задачи
@@ -30,20 +34,27 @@ import org.knit.solutions.TasksDescription;
 Реализовать обработку брака – если деталь не соответствует стандарту, она отправляется на доработку.
  */
 
-@TasksDescription(number = 9, name = "Конвейер сборки деталей")
-public class Main {
-    public static final String POISON_PILL = "POISON_PILL";
+@TaskDescription(taskNumber = 9, taskDescription = "Конвейер сборки деталей")
+public class Task9Solution implements Solution {
+    @Override
+    public void execute() {
 
-    public static void main(String[] args) {
+        System.out.println("Задача 9 запущена");
+
+        final String POISON_PILL = "POISON_PILL";
 
         BlockingQueue<String> stampingQueue   = new ArrayBlockingQueue<>(5);
         BlockingQueue<String> assemblingQueue = new ArrayBlockingQueue<>(5);
         BlockingQueue<String> warehouseQueue  = new ArrayBlockingQueue<>(5);
 
-        Thread stampingWorker  = new Thread(new StampingWorker(stampingQueue), "Штамповщик");
-        Thread assemblingWorker = new Thread(new AssemblingWorker(stampingQueue, assemblingQueue), "Сборщик");
-        Thread qualityWorker   = new Thread(new QualityWorker(assemblingQueue, warehouseQueue), "Оператор контроля");
-        Thread shipmentWorker  = new Thread(new ShipmentWorker(warehouseQueue), "Грузчик");
+        Thread stampingWorker   = new Thread(new StampingWorker(stampingQueue, POISON_PILL),
+                "Штамповщик");
+        Thread assemblingWorker = new Thread(new AssemblingWorker(stampingQueue, assemblingQueue, POISON_PILL),
+                "Сборщик");
+        Thread qualityWorker    = new Thread(new QualityWorker(assemblingQueue, warehouseQueue, POISON_PILL),
+                "Оператор контроля");
+        Thread shipmentWorker   = new Thread(new ShipmentWorker(warehouseQueue, POISON_PILL),
+                "Грузчик");
 
         stampingWorker.start();
         assemblingWorker.start();

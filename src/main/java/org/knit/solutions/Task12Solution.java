@@ -1,6 +1,8 @@
-package org.knit.solutions.Task12;
+package org.knit.solutions;
 
-import org.knit.solutions.TasksDescription;
+import org.knit.TaskDescription;
+import org.knit.solutions.Task12.Caretaker;
+import org.knit.solutions.Task12.TextEditor;
 
 /*
 Разработайте систему, позволяющую сохранять состояния текста в редакторе и откатывать изменения назад.
@@ -19,9 +21,12 @@ import org.knit.solutions.TasksDescription;
 Дополнительно: Реализуйте возможность нескольких уровней отката.
  */
 
-@TasksDescription(number = 12, name = "Паттерн Memento (Хранитель)")
-public class Main {
-    public static void main(String[] args) {
+@TaskDescription(taskNumber = 12, taskDescription = "Паттерн Memento (Хранитель)")
+public class Task12Solution implements Solution {
+    @Override
+    public void execute() {
+        System.out.println("Задача 12 запущена");
+
         TextEditor editor = new TextEditor();
         Caretaker caretaker = new Caretaker();
 
@@ -47,3 +52,4 @@ public class Main {
         System.out.println("После третьего отката: " + editor.getText());
     }
 }
+

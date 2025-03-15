@@ -6,13 +6,16 @@ import java.util.concurrent.BlockingQueue;
 public class QualityWorker implements Runnable {
     private final BlockingQueue<String> assemblingQueue;
     private final BlockingQueue<String> warehouseQueue;
+    private final String poisonPill;
     private final Random random = new Random();
     private int checkedCount = 0;
 
     public QualityWorker(BlockingQueue<String> assemblingQueue,
-                         BlockingQueue<String> warehouseQueue) {
+                         BlockingQueue<String> warehouseQueue,
+                         String poisonPill) {
         this.assemblingQueue = assemblingQueue;
         this.warehouseQueue = warehouseQueue;
+        this.poisonPill = poisonPill;
     }
 
     @Override
@@ -21,8 +24,8 @@ public class QualityWorker implements Runnable {
             while (true) {
                 String detail = assemblingQueue.take();
 
-                if (Main.POISON_PILL.equals(detail)) {
-                    warehouseQueue.put(Main.POISON_PILL);
+                if (poisonPill.equals(detail)) {
+                    warehouseQueue.put(poisonPill);
                     System.out.println(Thread.currentThread().getName()
                             + ": получил сигнал завершения, передал дальше.");
                     break;
@@ -56,3 +59,4 @@ public class QualityWorker implements Runnable {
         }
     }
 }
+

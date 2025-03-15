@@ -4,10 +4,12 @@ import java.util.concurrent.BlockingQueue;
 
 public class ShipmentWorker implements Runnable {
     private final BlockingQueue<String> warehouseQueue;
+    private final String poisonPill;
     private int shippedCount = 0;
 
-    public ShipmentWorker(BlockingQueue<String> warehouseQueue) {
+    public ShipmentWorker(BlockingQueue<String> warehouseQueue, String poisonPill) {
         this.warehouseQueue = warehouseQueue;
+        this.poisonPill = poisonPill;
     }
 
     @Override
@@ -16,14 +18,13 @@ public class ShipmentWorker implements Runnable {
             while (true) {
                 String detail = warehouseQueue.take();
 
-                if (Main.POISON_PILL.equals(detail)) {
+                if (poisonPill.equals(detail)) {
                     System.out.println(Thread.currentThread().getName()
                             + ": получил сигнал завершения. Всего отгружено: " + shippedCount);
                     break;
                 }
 
                 shipDetail(detail);
-
                 Thread.sleep((long) (Math.random() * 2000 + 500));
             }
         } catch (InterruptedException e) {
@@ -40,3 +41,4 @@ public class ShipmentWorker implements Runnable {
                 + ": " + detail + " отгружена покупателю. Всего отгружено: " + shippedCount);
     }
 }
+

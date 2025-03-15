@@ -1,6 +1,6 @@
 package org.knit.solutions.Task11;
 
-class EmailNotifier implements StockObserver {
+public class EmailNotifier implements StockObserver {
     private final String email;
 
     public EmailNotifier(String email) {

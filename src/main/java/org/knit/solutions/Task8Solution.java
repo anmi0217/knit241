@@ -1,7 +1,8 @@
-package org.knit.solutions.Task8;
+package org.knit.solutions;
 
-import org.knit.solutions.TasksDescription;
-
+import org.knit.TaskDescription;
+import org.knit.solutions.Task8.Car;
+import org.knit.solutions.Task8.TrafficLight;
 
 /*
 📌 Описание:
@@ -15,9 +16,12 @@ import org.knit.solutions.TasksDescription;
 ✔ Потоки "Машина" ждут wait(), если красный свет.
  */
 
-@TasksDescription(number = 8, name = "Перекресток: светофор и машины")
-public class Main {
-    public static void main(String[] args) {
+@TaskDescription(taskNumber = 8, taskDescription = "Перекресток: светофор и машины")
+public class Task8Solution implements Solution {
+    @Override
+    public void execute() {
+        System.out.println("Задача 8 запущена");
+
         Object lock = new Object();
 
         TrafficLight trafficLight = new TrafficLight(lock);

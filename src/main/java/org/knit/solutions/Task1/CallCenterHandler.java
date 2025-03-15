@@ -1,6 +1,6 @@
 package org.knit.solutions.Task1;
 
-class CallCenterHandler extends ComplaintHandler {
+public class CallCenterHandler extends ComplaintHandler {
 
     public CallCenterHandler() {
         setNextHandler(new ManagerHandler());

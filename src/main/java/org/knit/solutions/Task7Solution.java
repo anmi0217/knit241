@@ -1,6 +1,9 @@
-package org.knit.solutions.Task7;
+package org.knit.solutions;
 
-import org.knit.solutions.TasksDescription;
+import org.knit.TaskDescription;
+import org.knit.solutions.Task7.Consumer;
+import org.knit.solutions.Task7.Producer;
+import org.knit.solutions.Task7.Warehouse;
 
 /*
 📌 Описание:
@@ -14,9 +17,12 @@ import org.knit.solutions.TasksDescription;
 ✔ notify() – пробуждение потока, когда изменяется состояние склада.
  */
 
-@TasksDescription(number = 7, name = "Производитель-Потребитель с ограничением")
-public class Main {
-    public static void main(String[] args) {
+@TaskDescription(taskNumber = 7, taskDescription = "Производитель: Потребитель с ограничением")
+public class Task7Solution implements Solution{
+    @Override
+    public void execute() {
+        System.out.println("Задача 7 запущена");
+
         Warehouse warehouse = new Warehouse();
 
         Producer producer = new Producer("Производитель-1", warehouse);
@@ -24,5 +30,6 @@ public class Main {
 
         producer.start();
         consumer.start();
+
     }
 }

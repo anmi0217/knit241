@@ -1,6 +1,9 @@
-package org.knit.solutions.Task5;
+package org.knit.solutions;
 
-import org.knit.solutions.TasksDescription;
+import org.knit.TaskDescription;
+import org.knit.solutions.Task5.Chef;
+import org.knit.solutions.Task5.Restaurant;
+import org.knit.solutions.Task5.Waiter;
 
 /*
 📌 Описание:
@@ -14,9 +17,12 @@ import org.knit.solutions.TasksDescription;
 ✔ При каждой передаче блюда используется notify().
  */
 
-@TasksDescription(number = 5, name = "Ресторан: Повар и Официант")
-public class Main {
-    public static void main(String[] args) {
+@TaskDescription(taskNumber = 5, taskDescription = "Ресторан: Повар и Официант")
+public class Task5Solution implements Solution {
+    @Override
+    public void execute() {
+        System.out.println("Задача 5 запущена");
+
         Restaurant restaurant = new Restaurant();
 
         Chef chef = new Chef("Повар-1", restaurant);

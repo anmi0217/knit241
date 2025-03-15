@@ -2,7 +2,7 @@ package org.knit.solutions.Task12;
 
 import java.util.Stack;
 
-class Caretaker {
+public class Caretaker {
     private final Stack<Memento> history = new Stack<>();
 
     public void saveState(TextEditor editor) {

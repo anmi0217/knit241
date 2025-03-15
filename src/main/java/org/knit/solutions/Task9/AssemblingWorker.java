@@ -5,11 +5,14 @@ import java.util.concurrent.BlockingQueue;
 public class AssemblingWorker implements Runnable {
     private final BlockingQueue<String> stampingQueue;
     private final BlockingQueue<String> assemblingQueue;
+    private final String poisonPill;
 
     public AssemblingWorker(BlockingQueue<String> stampingQueue,
-                            BlockingQueue<String> assemblingQueue) {
+                            BlockingQueue<String> assemblingQueue,
+                            String poisonPill) {
         this.stampingQueue = stampingQueue;
         this.assemblingQueue = assemblingQueue;
+        this.poisonPill = poisonPill;
     }
 
     @Override
@@ -18,9 +21,10 @@ public class AssemblingWorker implements Runnable {
             while (true) {
                 String blank = stampingQueue.take();
 
-                if (Main.POISON_PILL.equals(blank)) {
-                    assemblingQueue.put(Main.POISON_PILL);
-                    System.out.println(Thread.currentThread().getName() + ": получил сигнал завершения, передал дальше.");
+                if (poisonPill.equals(blank)) {
+                    assemblingQueue.put(poisonPill);
+                    System.out.println(Thread.currentThread().getName()
+                            + ": получил сигнал завершения, передал дальше.");
                     break;
                 }
 

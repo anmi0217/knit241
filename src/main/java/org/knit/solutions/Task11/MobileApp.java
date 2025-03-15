@@ -1,6 +1,6 @@
 package org.knit.solutions.Task11;
 
-class MobileApp implements StockObserver {
+public class MobileApp implements StockObserver {
     private final String userName;
 
     public MobileApp(String userName) {

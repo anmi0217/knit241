@@ -4,10 +4,11 @@ import java.util.concurrent.BlockingQueue;
 
 public class StampingWorker implements Runnable {
     private final BlockingQueue<String> stampingQueue;
-    private int detailCounter = 0;
+    private final String poisonPill;
 
-    public StampingWorker(BlockingQueue<String> stampingQueue) {
+    public StampingWorker(BlockingQueue<String> stampingQueue, String poisonPill) {
         this.stampingQueue = stampingQueue;
+        this.poisonPill = poisonPill;
     }
 
     @Override
@@ -18,8 +19,9 @@ public class StampingWorker implements Runnable {
                 Thread.sleep((long) (Math.random() * 1000 + 500));
             }
 
-            stampingQueue.put(Main.POISON_PILL);
-            System.out.println(Thread.currentThread().getName() + ": закончил(а) работу и отправил сигнал завершения.");
+            stampingQueue.put(poisonPill);
+            System.out.println(Thread.currentThread().getName()
+                    + ": закончил(а) работу и отправил сигнал завершения.");
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             System.out.println(Thread.currentThread().getName() + ": был(а) прерван(а).");
@@ -27,10 +29,9 @@ public class StampingWorker implements Runnable {
     }
 
     private void produceBlank(int i) throws InterruptedException {
-        detailCounter++;
         String blank = "Заготовка " + i;
         stampingQueue.put(blank);
-
         System.out.println(Thread.currentThread().getName() + ": " + blank + " создана");
     }
 }
+

@@ -1,7 +1,8 @@
-package org.knit.solutions.Task4;
+package org.knit.solutions;
 
-import org.knit.solutions.TasksDescription;
-
+import org.knit.TaskDescription;
+import org.knit.solutions.Task4.Car;
+import org.knit.solutions.Task4.GasStation;
 
 /*
 📌 Описание:
@@ -14,9 +15,12 @@ import org.knit.solutions.TasksDescription;
 ✔ Поток "Машина" заправляется, затем освобождает колонку.
  */
 
-@TasksDescription(number = 4, name = "Автозаправочная станция")
-public class Main {
-    public static void main(String[] args) {
+@TaskDescription(taskNumber = 4, taskDescription = "Автозаправочная станция")
+public class Task4Solution implements Solution {
+    @Override
+    public void execute() {
+        System.out.println("Задача 4 запущена");
+
         int totalCars = 10;
         GasStation gasStation = new GasStation(totalCars);
 

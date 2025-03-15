@@ -1,6 +1,7 @@
-package org.knit.solutions.Task2;
+package org.knit.solutions;
 
-import org.knit.solutions.TasksDescription;
+import org.knit.TaskDescription;
+import org.knit.solutions.Task2.*;
 
 /*
 Задача 2.2 Decorator (Декоратор)
@@ -21,9 +22,12 @@ import org.knit.solutions.TasksDescription;
 Расширьте решение, добавив калорийность и разные виды напитков
  */
 
-@TasksDescription(number = 2, name = "Decorator (Декоратор)")
-public class Main {
-    public static void main(String[] args) {
+@TaskDescription(taskNumber = 2, taskDescription = "Decorator (Декоратор)")
+public class Task2Solution implements Solution {
+    @Override
+    public void execute() {
+        System.out.println("Задача 2 запущена");
+
         Coffee coffee = new Espresso();
         System.out.println(coffee.getDescription() + " | Цена: $" + coffee.getCost() + " | Калорийность: " + coffee.getCalories() + " ккал");
 
@@ -40,3 +44,4 @@ public class Main {
         System.out.println(coffee.getDescription() + " | Цена: $" + coffee.getCost() + " | Калорийность: " + coffee.getCalories() + " ккал");
     }
 }
+

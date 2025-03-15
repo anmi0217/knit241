@@ -1,6 +1,6 @@
 package org.knit.solutions.Task1;
 
-abstract class ComplaintHandler {
+public abstract class ComplaintHandler {
     protected ComplaintHandler nextHandler;
 
     public void setNextHandler(ComplaintHandler nextHandler) {

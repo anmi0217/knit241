@@ -1,6 +1,9 @@
-package org.knit.solutions.Task11;
+package org.knit.solutions;
 
-import org.knit.solutions.TasksDescription;
+import org.knit.TaskDescription;
+import org.knit.solutions.Task11.EmailNotifier;
+import org.knit.solutions.Task11.MobileApp;
+import org.knit.solutions.Task11.Stock;
 
 /*
 Вы разрабатываете приложение для биржевой торговли, где пользователи могут подписываться на обновления акций определённых компаний.
@@ -17,9 +20,12 @@ import org.knit.solutions.TasksDescription;
 Дополнительно: Добавьте возможность подписки на акции нескольких компаний.
  */
 
-@TasksDescription(number = 11, name = "Паттерн Observer (Наблюдатель)")
-public class Main {
-    public static void main(String[] args) {
+@TaskDescription(taskNumber = 11, taskDescription = "Паттерн Observer (Наблюдатель)")
+public class Task11Solution implements Solution {
+    @Override
+    public void execute() {
+        System.out.println("Задача 11 запущена");
+
         Stock teslaStock = new Stock("Tesla", 700);
         Stock appleStock = new Stock("Apple", 150);
 

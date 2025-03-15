@@ -1,7 +1,8 @@
-package org.knit.solutions.Task3;
+package org.knit.solutions;
 
-import org.knit.solutions.TasksDescription;
-
+import org.knit.TaskDescription;
+import org.knit.solutions.Task3.Transport;
+import org.knit.solutions.Task3.TransportFactory;
 
 /*
 Паттерн Factory используется для создания объектов без указания конкретного класса. Это полезно, когда необходимо создавать объекты на основе входных параметров и логики выбора.
@@ -24,14 +25,19 @@ Motorbike предназначен для быстрой доставки.
 Вызов TransportFactory.createTransport("business") должен возвращать объект BusinessCar.
  */
 
-@TasksDescription(number = 3, name = "Factory (Фабрика)")
-public class Main {
-    public static void main(String[] args) {
+@TaskDescription(taskNumber = 3, taskDescription = "Factory (Фабрика)")
+public class Task3Solution implements Solution {
+    @Override
+    public void execute() {
+        System.out.println("Задача 3 запущена");
+
         try {
             Transport transport = TransportFactory.createTransport("business");
             System.out.println(transport.getSpecifications());
         } catch (IllegalArgumentException e) {
             System.err.println(e.getMessage());
         }
+
     }
 }
+
