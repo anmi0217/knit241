@@ -1,0 +1,2 @@
+Компиляция классов: javac DatabaseConnection.java FileDAO.java FileProcessor.java FileApp.java
+Запуск: java FileApp
