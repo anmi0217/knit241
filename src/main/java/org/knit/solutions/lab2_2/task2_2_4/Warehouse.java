@@ -13,7 +13,7 @@ public class Warehouse {
             wait();
         }
         warehouseQueue.add(name);
-        System.out.println("Производитель произвел товар " + name);
+        System.out.println("Производитель произвел " + name);
         Thread.sleep(500);
         notify();
     }
@@ -23,7 +23,7 @@ public class Warehouse {
             System.out.println("Производитель еще ничего не произвел...");
             wait();
         }
-        System.out.println("Потребитель забрал товар " + warehouseQueue.poll());
+        System.out.println("Потребитель забрал " + warehouseQueue.poll());
         notify();
     }
 }

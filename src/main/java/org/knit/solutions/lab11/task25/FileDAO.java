@@ -1,5 +1,5 @@
 package org.knit.solutions.lab11.task25;
-import org.knit.lab11.task24.DatabaseConnection;
+import org.knit.solutions.lab11.task24.DatabaseConnection;
 
 import java.io.File;
 import java.io.FileInputStream;

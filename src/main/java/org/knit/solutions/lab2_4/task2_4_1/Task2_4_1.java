@@ -1,5 +1,8 @@
 package org.knit.solutions.lab2_4.task2_4_1;
 
+import java.util.Dictionary;
+import java.util.Hashtable;
+import java.util.List;
 import java.util.Scanner;
 
 public class Task2_4_1 {
@@ -7,10 +10,6 @@ public class Task2_4_1 {
         Stock stock = new Stock();
         MobileApp mobileApp = new MobileApp();
         EmailNotifier emailNotifier = new EmailNotifier();
-
-        Scanner scanner = new Scanner(System.in);
-
-        scanner.nextLine();
 
         stock.addObserver(mobileApp);
         stock.addObserver(emailNotifier);
