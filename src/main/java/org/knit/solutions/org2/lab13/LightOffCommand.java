@@ -1,7 +1,7 @@
 package org.knit.solutions.org2.lab13;
 
 // выключение света
-class LightOffCommand implements Command {
+public class LightOffCommand implements Command {
     private Light light;
 
     public LightOffCommand(Light light) {

@@ -1,7 +1,7 @@
 package org.knit.solutions.org2.lab13;
 
 // включение телевизора
-class TVOnCommand implements Command {
+public class TVOnCommand implements Command {
     private TV tv;
 
     public TVOnCommand(TV tv) {

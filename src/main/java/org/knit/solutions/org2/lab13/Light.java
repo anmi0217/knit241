@@ -1,7 +1,7 @@
 package org.knit.solutions.org2.lab13;
 
 // управление светом
-class Light {
+public class Light {
     public void on() {
         System.out.println("Да будет свет!!!");
     }
