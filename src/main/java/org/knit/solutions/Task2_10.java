@@ -19,6 +19,7 @@ public class Task2_10 implements Solution{
     public void execute() {
 
         int runnerCount = 5;
+
         CyclicBarrier barrier = new CyclicBarrier(runnerCount, new BarrierAction());
 
         for (int i = 0; i < runnerCount; i++) {
