@@ -1,6 +1,6 @@
 package org.knit.solutions.org2.lab14;
 
-class VirusScanner implements FileSystemVisitor {
+public class VirusScanner implements FileSystemVisitor {
     @Override
     public void visit(File file) {
         if (file.isInfected()) {
