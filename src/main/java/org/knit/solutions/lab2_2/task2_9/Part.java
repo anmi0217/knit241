@@ -1,4 +1,4 @@
-package org.knit.solutions.task2_9.task2_9;
+package org.knit.solutions.lab2_2.task2_9;
 
 // Класс детали с идентификатором
 public class Part {

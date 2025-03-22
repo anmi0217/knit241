@@ -1,10 +1,10 @@
-package org.knit.solutions.task2_9.task2_10;
+package org.knit.solutions.lab2_3.task2_10;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.ThreadLocalRandom;
 
-class Runner implements Runnable {
+public class Runner implements Runnable {
     private final CyclicBarrier barrier;
     private final int id;
 

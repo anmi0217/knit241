@@ -1,12 +1,17 @@
-package org.knit.solutions.task2_9.task2_10;
+package org.knit.solutions;
+import org.knit.TaskDescription;
+import org.knit.solutions.lab2_3.task2_10.Runner;
 
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-public class Race {
-    public static void main(String[] args) {
+@TaskDescription(taskNumber = 10, taskDescription = "Гонка")
+public class Race implements Solution {
+
+    @Override
+    public void execute() {
         final int numRunners = 5;
 
         CyclicBarrier barrier = new CyclicBarrier(numRunners, () ->
