@@ -1,6 +1,6 @@
 package org.knit.solutions.org2.lab14;
 
-class File implements FileSystemElement {
+public class File implements FileSystemElement {
     private String name;
     private int size;
     private boolean isInfected; // Флаг, указывающий на наличие вируса

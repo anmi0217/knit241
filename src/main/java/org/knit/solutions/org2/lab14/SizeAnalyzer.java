@@ -1,6 +1,6 @@
 package org.knit.solutions.org2.lab14;
 
-class SizeAnalyzer implements FileSystemVisitor {
+public class SizeAnalyzer implements FileSystemVisitor {
     private int totalSize = 0;
 
     @Override

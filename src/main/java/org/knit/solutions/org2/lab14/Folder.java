@@ -3,7 +3,7 @@ package org.knit.solutions.org2.lab14;
 import java.util.ArrayList;
 import java.util.List;
 
-class Folder implements FileSystemElement {
+public class Folder implements FileSystemElement {
     private String name;
     private List<FileSystemElement> elements = new ArrayList<>();
 
