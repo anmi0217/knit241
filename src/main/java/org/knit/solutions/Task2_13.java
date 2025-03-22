@@ -16,6 +16,7 @@ public class Task2_13 implements Solution{
         TVOffCommand tvOff = new TVOffCommand(house);
         TVOnCommand tvOn = new TVOnCommand(house);
 
+
         remoteControl.executeCommand(lightOn);
         remoteControl.executeCommand(tvOn);
         remoteControl.executeCommand(lightOff);
