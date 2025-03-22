@@ -18,16 +18,12 @@ public class Task2_12 implements Solution{
 
         textEditor.editText("iouuthrogviu owihgg owiegh koqpo olhee");
         careTaker.addSave();
-
         textEditor.editText("еще один текст");
         careTaker.addSave();
-
         textEditor.editText("jsdfug");
         careTaker.addSave();
-
         textEditor.editText("erfiuherfiouhwerfwerfwerfwergwrgdfsgsdgwregf");
         careTaker.addSave();
-
         textEditor.editText("последний");
         careTaker.loadLastSave();
         careTaker.loadLastSave();
