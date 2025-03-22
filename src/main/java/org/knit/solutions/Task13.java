@@ -10,7 +10,7 @@ import org.knit.solutions.org2.lab13.*;
 
 import java.util.Scanner;
 
-@TaskDescription(taskNumber = 13, taskDescription = "Паттерн Command (Команда)")
+@TaskDescription(taskNumber = 13, taskDescription = "Паттерн Command (Команда) ...")
 public class Task13 implements Solution
 {
 
