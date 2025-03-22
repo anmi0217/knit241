@@ -39,7 +39,7 @@ class Runner implements Runnable {
                 System.out.println("Гонка завершена досрочно из-за травмы одного из бегунов!");
                 System.exit(0);
             }
-            ;
+
 
             System.out.println("Бегун " + id + " финишировал за " + runTime + " мс.");
 
