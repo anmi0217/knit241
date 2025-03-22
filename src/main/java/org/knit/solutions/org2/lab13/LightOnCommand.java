@@ -1,7 +1,7 @@
 package org.knit.solutions.org2.lab13;
 
 // включение света
-class LightOnCommand implements Command {
+public class LightOnCommand implements Command {
     private Light light;
 
     public LightOnCommand(Light light) {

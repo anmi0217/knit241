@@ -3,16 +3,19 @@
 такие как включение/выключение света, управление телевизором и кондиционером.
  */
 
-package org.knit.solutions.org2.lab13;
+package org.knit.solutions;
 
-import org.knit.solutions.annotations.Discription;
+import org.knit.TaskDescription;
+import org.knit.solutions.org2.lab13.*;
 
 import java.util.Scanner;
 
-@Discription(value = 13, name = "Реализация системы команд для управления умным домом")
-public class Task13 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+@TaskDescription(taskNumber = 13, taskDescription = "Паттерн Command (Команда) ...")
+public class Task13 implements Solution
+{
+
+    @Override
+    public void execute() { Scanner scanner = new Scanner(System.in);
         RemoteControl remoteControl = new RemoteControl(); // Создаем пульт
         Light light = new Light(); // Создаем свет
         TV tv = new TV(); // Создаем телевизор
@@ -59,5 +62,8 @@ public class Task13 {
                     System.out.println("Неверный выбор. Попробуйте снова.");
             }
         }
+
     }
 }
+
+
