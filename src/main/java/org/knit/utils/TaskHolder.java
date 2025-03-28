@@ -1,6 +1,6 @@
 package org.knit.utils;
 
-import org.knit.solutions.Solution;
+import org.knit.solutions.ClassesSem2.lab4.task1.Solution;
 
 public class TaskHolder implements Comparable<TaskHolder> {
     private final Class<? extends Solution> taskClass;
