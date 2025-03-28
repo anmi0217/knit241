@@ -16,6 +16,7 @@ public class Task2_14 implements Solution{
         Folder folder2 = new Folder("folder2");
         Shortcut shortcut = new Shortcut("shortcutToFile2", file2);
 
+
         folder1.add(file1);
         folder1.add(file2);
         folder1.add(folder2);
