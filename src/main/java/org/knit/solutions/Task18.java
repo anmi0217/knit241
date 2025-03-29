@@ -12,8 +12,9 @@ public class Task18 implements Solution{
     @Override
     public void execute() throws Exception {
         MyList list = new MyList(new ArrayList<>(Arrays.asList(4, 0, 9, 0, 4, 0, 9, 7, 7, 8)));
-
+        System.out.println("Исходный список: " + list.getList());
         list.duplicateZeros();
-        System.out.print(list.getList());
+        System.out.println("С удвоенными нолями: " + list.getList());
+        System.out.println("Запустите все тесты в src/test/java");
     }
 }

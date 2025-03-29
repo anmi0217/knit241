@@ -12,7 +12,7 @@ import java.util.TreeMap;
 public class Main {
     public static final String PACKAGE = "org.knit.solutions";
 
-    public static void main(String[] args) throws IOException, URISyntaxException {
+    public static void main(String[] args) throws Exception {
         TreeMap<Integer, TaskHolder> tasks = TaskFinder.findTasks(PACKAGE);
         for (TaskHolder task : tasks.values()) {
             System.out.println("Номер задачи: " + task.getId() + ": " + task.getDescriptor());

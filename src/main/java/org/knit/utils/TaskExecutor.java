@@ -6,7 +6,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 public class TaskExecutor {
-    public static void executeTask(Class<? extends Solution> aClass) {
+    public static void executeTask(Class<? extends Solution> aClass) throws Exception {
         try {
             Constructor<? extends Solution> constructor = aClass.getConstructor();
             Solution solution = constructor.newInstance();
