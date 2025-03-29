@@ -15,6 +15,7 @@
     </properties>
 
     <dependencies>
+
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
@@ -26,7 +27,6 @@
             <artifactId>guava</artifactId>
             <version>32.1.2-jre</version>
         </dependency>
-
 
         <dependency>
             <groupId>com.google.code.gson</groupId>
@@ -40,15 +40,25 @@
             <artifactId>commons-lang3</artifactId>
             <version>3.17.0</version>
         </dependency>
-               <dependency>
+
+        <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>42.6.0</version>
         </dependency>
+
         <dependency>
             <groupId>org.xerial</groupId>
             <artifactId>sqlite-jdbc</artifactId>
             <version>3.47.1.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 </project>
