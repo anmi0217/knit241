@@ -1,6 +1,6 @@
 package org.knit.utils;
 
-import org.knit.solutions.Solution;
+import org.knit.solutions.ClassesSem2.lab4.task1.Solution;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
