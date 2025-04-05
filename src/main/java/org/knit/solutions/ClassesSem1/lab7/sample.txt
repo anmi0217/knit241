@@ -1,0 +1,4 @@
+Hello, this is a simple file.
+It contains a few lines of text.
+Each line will be counted.
+The words will also be counted.
