@@ -1,7 +1,7 @@
 package org.knit.solutions.org2.lab11;
 
 // Класс email-уведомлений (наблюдатель)
-class EmailNotifier implements StockObserver {
+public class EmailNotifier implements StockObserver {
     private String email;
 
     public EmailNotifier(String email) {
