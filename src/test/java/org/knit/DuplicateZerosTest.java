@@ -2,7 +2,10 @@ package org.knit;
 
 import org.junit.Test;
 
+import java.util.Random;
+
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertTrue;
 import static org.knit.solutions.task42.Task42.duplicateZeros;
 
 /**
@@ -91,9 +94,18 @@ public class DuplicateZerosTest {
 
     /**
      * Считается время выполнения на большом массиве (10^4).
+     * Время выполнение не должно превышать 25 мс.
      */
     @Test
     public void calculateExecutionTime() {
-
+        Random random = new Random();
+        int[] array = new int[10000];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = random.nextInt(10);
+        }
+        long start = System.currentTimeMillis();
+        duplicateZeros(array);
+        long end = System.currentTimeMillis();
+        assertTrue(end - start < 25);
     }
 }
