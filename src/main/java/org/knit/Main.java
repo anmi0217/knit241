@@ -13,7 +13,7 @@ public class Main {
     public static final String PACKAGE = "org.knit.solutions";
 
     public static void main(String[] args) throws IOException, URISyntaxException {
-        TreeMap<Integer, TaskHolder> tasks = TaskFinder.findTasks(PACKAGE);
+        TreeMap<Integer, TaskHolder> tasks = TaskFinder.findTasksByReflectionApi(PACKAGE);
         for (TaskHolder task : tasks.values()) {
             System.out.println("Номер задачи: " + task.getId() + ": " + task.getDescriptor());
         }
