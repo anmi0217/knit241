@@ -2,7 +2,7 @@ package org.knit.solutions.org2.lab10;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
-class Runner implements Runnable {
+public class Runner implements Runnable {
     private final CyclicBarrier startBarrier; // Барьер для старта
     private final CyclicBarrier finishBarrier; // Барьер для финиша
     private final int runnerId; // Идентификатор бегуна

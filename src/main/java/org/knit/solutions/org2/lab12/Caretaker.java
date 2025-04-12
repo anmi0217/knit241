@@ -3,7 +3,7 @@ package org.knit.solutions.org2.lab12;
 import java.util.Stack;
 
 // Класс Caretaker (управляет историей изменений)
-class Caretaker {
+public class Caretaker {
     private final Stack<TextMemento> history = new Stack<>(); // Стек для хранения состояний
 
     // Метод для сохранения состояния

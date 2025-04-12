@@ -1,7 +1,7 @@
 package org.knit.solutions.org2.lab11;
 
 // Класс мобильного приложения (наблюдатель)
-class MobileApp implements StockObserver {
+public class MobileApp implements StockObserver {
     private String user;
 
     public MobileApp(String user) {

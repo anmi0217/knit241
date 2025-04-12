@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // Класс акции
-class Stock {
+public class Stock {
     private String name; // Название акции
     private double price; // Текущая цена
     private List<StockObserver> observers = new ArrayList<>(); // Список подписчиков
