@@ -2,7 +2,7 @@ package org.knit.solutions.org2.lab12;
 
 
 // Класс Memento (хранитель состояния)
-class TextMemento {
+public class TextMemento {
     private final String text; // Сохраненное состояние текста
 
     public TextMemento(String text) {
