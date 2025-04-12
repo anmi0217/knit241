@@ -15,6 +15,7 @@
         <ch.qos.logback>1.2.13</ch.qos.logback>
         <spring.version>5.3.34</spring.version>
         <org.slf4j>1.7.36</org.slf4j>
+        <junit>4.13.2</junit>
     </properties>
 
     <dependencies>
@@ -99,6 +100,21 @@
             <groupId>org.reflections</groupId>
             <artifactId>reflections</artifactId>
             <version>0.10.2</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit}</version>
+            <scope>test</scope>
+        </dependency>
+      
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>
