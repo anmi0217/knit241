@@ -27,11 +27,6 @@ public class Task18 implements Solution {
         printArray("После:", arr2);
     }
 
-    @Override
-    public void duplicateZeros(int[] arr1) {
-
-    }
-
     private void printArray(String prefix, int[] arr) {
         System.out.print(prefix + " [");
         for (int i = 0; i < arr.length; i++) {
