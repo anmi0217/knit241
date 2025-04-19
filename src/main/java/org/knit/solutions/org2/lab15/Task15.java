@@ -1,10 +1,16 @@
 package org.knit.solutions.org2.lab15;
 
-import org.knit.solutions.annotations.Discription;
+import org.knit.TaskDescription;
+import org.knit.solutions.Solution;
 
-@Discription(value = 15, name = "Прокси (Proxy)")
-public class Task15 {
-    public static void main(String[] args) {
+@TaskDescription(
+        taskNumber = 15,
+        taskDescription = "Реализация паттерна Прокси (Proxy) для ленивой загрузки изображений"
+)
+public class Task15 implements Solution {
+
+    @Override
+    public void execute() {
         // Создаем прокси для изображений
         Image image1 = new ImageProxy("nature.jpg");
         Image image2 = new ImageProxy("city.jpg");

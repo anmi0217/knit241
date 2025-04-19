@@ -1,7 +1,7 @@
 package org.knit.solutions.org2.lab12;
 
 // Класс TextEditor (редактор текста)
-class TextEditor {
+public class TextEditor {
     private String text; // Текущий текст
 
     public TextEditor() {

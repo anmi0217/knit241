@@ -1,16 +1,21 @@
 package org.knit.solutions.org2.lab17;
 
 import org.knit.TaskDescription;
+import org.knit.solutions.Solution;
+
 import java.util.Random;
 
-@TaskDescription(taskNumber = 17, taskDescription = "Реализация и проверка парадокса Монти Холла")
-public class Task17
-{
+@TaskDescription(
+        taskNumber = 17,
+        taskDescription = "Реализация и проверка парадокса Монти Холла"
+)
+public class Task17 implements Solution {
     private static final int TOTAL_DOORS = 3;
     private static final int TOTAL_GAMES = 1_000_000;
     private static final Random random = new Random();
 
-    public static void main(String[] args) {
+    @Override
+    public void execute() {
         int winWhenSwitch = 0;
         int winWhenStay = 0;
 
