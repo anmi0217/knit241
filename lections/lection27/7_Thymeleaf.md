@@ -126,3 +126,5 @@ public class ErrorController {
 - Упрощённый UI без использования React/Vue
 
 ---
+
+https://getbootstrap.com/docs/5.3/getting-started/download/
