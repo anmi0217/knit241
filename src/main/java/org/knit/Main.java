@@ -10,22 +10,32 @@ import java.util.Scanner;
 import java.util.TreeMap;
 
 public class Main {
-    public static final String PACKAGE = "org.knit.solutions";
+    public static void main(String[] args) {
+        Scanner inputScanner = new Scanner(System.in);
+        final String TASKS_PACKAGE = "org.knit.solutions.Tasks2Semestr";
 
-    public static void main(String[] args) throws IOException, URISyntaxException {
-        TreeMap<Integer, TaskHolder> tasks = TaskFinder.findTasksByReflectionApi(PACKAGE);
-        for (TaskHolder task : tasks.values()) {
-            System.out.println("Номер задачи: " + task.getId() + ": " + task.getDescriptor());
-        }
+        try {
+            TreeMap<Integer, TaskHolder> availableTasks = TaskFinder.findTasks(TASKS_PACKAGE);
 
-        try (Scanner scanner = new Scanner(System.in)) {
-            System.out.println("Введите номер задачи для запуска");
-            TaskHolder taskHolder = tasks.get(scanner.nextInt());
-            if (taskHolder != null) {
-                TaskExecutor.executeTask(taskHolder.getTaskClass());
-            } else {
-                System.out.println("Task not found");
+            System.out.println("Доступны/сделаны следующие задачи:");
+            for (TaskHolder task : availableTasks.values()) {
+                System.out.printf("Задача №%d: %s%n", task.getId(), task.getDescriptor());
             }
+
+            System.out.print("Введите номер задачи для его выполнения: ");
+            int selectedTaskNumber = inputScanner.nextInt();
+
+            TaskHolder selectedTask = availableTasks.get(selectedTaskNumber);
+            if (selectedTask != null) {
+                TaskExecutor.executeTask(selectedTask.getTaskClass());
+            } else {
+                System.out.println("Задача с таким номером не найдена.");
+            }
+
+        } catch (IOException | URISyntaxException e) {
+            System.out.println("Ошибка при поиске задач: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Произошла непредвиденная ошибка: " + e.getMessage());
         }
     }
 }
